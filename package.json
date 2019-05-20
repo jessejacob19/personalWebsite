@@ -1,0 +1,29 @@
+{
+  "name": "eda_bolierplate",
+  "version": "1.0.0",
+  "description": "boilerplate for the stack taught at eda",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server",
+    "test": "jest --watchAll"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessejacob19/eda_bolierplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessejacob19/eda_bolierplate/issues"
+  },
+  "homepage": "https://github.com/jessejacob19/eda_bolierplate#readme",
+  "dependencies": {
+    "express": "^4.17.0",
+    "jest": "^24.8.0",
+    "knex": "^0.17.0-next3",
+    "nodemon": "^1.19.0",
+    "sqlite3": "^4.0.8"
+  }
+}
