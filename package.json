@@ -4,7 +4,7 @@
   "description": "boilerplate for the stack taught at eda",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server",
+    "dev": "nodemon server & webpack --watch",
     "start": "node server",
     "test": "jest --watchAll"
   },
@@ -15,15 +15,44 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "modules": false
+        }
+      ],
+      "@babel/preset-react"
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  },
   "bugs": {
     "url": "https://github.com/jessejacob19/eda_bolierplate/issues"
   },
   "homepage": "https://github.com/jessejacob19/eda_bolierplate#readme",
   "dependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
     "express": "^4.17.0",
     "jest": "^24.8.0",
     "knex": "^0.17.0-next3",
     "nodemon": "^1.19.0",
-    "sqlite3": "^4.0.8"
+    "npm-run-all": "^4.1.5",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-hot-loader": "^4.8.7",
+    "react-redux": "^7.0.3",
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "sqlite3": "^4.0.8",
+    "thunk": "0.0.1",
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
   }
 }
