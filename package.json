@@ -4,9 +4,17 @@
   "description": "boilerplate for the stack taught at eda",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server & webpack --watch",
-    "start": "node server",
-    "test": "jest --watchAll"
+    "dev": "run-p dev:server dev:client",
+    "dev:server": "nodemon server",
+    "dev:client": "npm run build -- --watch",
+    "knex": "knex --knexfile server/db/knexfile.js",
+    "db-reset": "run-s db:*",
+    "db:delete": "rm server/db/dev.sqlite3",
+    "db:migrate": "npm run knex migrate:latest",
+    "db:seed": "npm run knex seed:run",
+    "build": "webpack --config client/webpack.config.js",
+    "postinstall": "run-s db:migrate db:seed",
+    "test": "jest --verbose tests/client/components tests/server"
   },
   "repository": {
     "type": "git",
@@ -50,6 +58,8 @@
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
     "sqlite3": "^4.0.8",
+    "superagent": "^5.0.5",
+    "supertest": "^4.0.2",
     "thunk": "0.0.1",
     "webpack": "^4.32.0",
     "webpack-cli": "^3.3.2",

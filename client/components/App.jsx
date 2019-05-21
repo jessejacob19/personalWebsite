@@ -1,9 +1,15 @@
 import React, { Component, Fragment as F } from "react";
+import { connect } from "react-redux";
+
+import { fetchEmojiAction } from "../actions/emoji";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {};
+  }
+  componentDidMount() {
+    this.props.fetchEmoji();
   }
   render() {
     return (
@@ -13,5 +19,16 @@ class App extends Component {
     );
   }
 }
+function mapStateToProps(state) {
+  return state;
+}
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchEmoji: () => {
+      dispatch(fetchEmojiAction())
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
