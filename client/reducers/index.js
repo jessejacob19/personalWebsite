@@ -1,7 +1,9 @@
 import {combineReducers} from 'redux'
 
-const reducers = combineReducers({
+import emoji from './emoji'
 
+const reducers = combineReducers({
+  emoji
 })
 
 export default reducers
