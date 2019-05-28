@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux'
 
-import emoji from './emoji'
+//import reducers here
 
 const reducers = combineReducers({
-  emoji
+  //put reducers in here
 })
 
 export default reducers

@@ -12,7 +12,7 @@
     "db:delete": "rm server/db/dev.sqlite3",
     "db:migrate": "npm run knex migrate:latest",
     "db:seed": "npm run knex seed:run",
-    "build": "webpack --config client/webpack.config.js",
+    "build": "webpack --config webpack.config.js",
     "postinstall": "run-s db:migrate db:seed",
     "test": "jest --verbose tests/client/components tests/server"
   },
