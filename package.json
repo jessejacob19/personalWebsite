@@ -46,7 +46,7 @@
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "express": "^4.17.0",
+    "express": "^4.17.3",
     "jest": "^24.8.0",
     "knex": "^0.17.0-next3",
     "nodemon": "^1.19.0",
